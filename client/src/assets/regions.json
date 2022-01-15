@@ -1,0 +1,495 @@
+[
+    {
+        "code": 47,
+        "county": "Nairobi (County)",
+        "towns": [
+            "CBD",
+            "Karen",
+            "South C",
+            "Westlands",
+            "Kileleshwa",
+            "Kitisuru",
+            "Parklands",
+            "Mountain View",
+            "Kilimani",
+            "Kawangware",
+            "Nairobi West",
+            "Nyayo Highrise",
+            "Kibra",
+            "Langata",
+            "Githurai 44",
+            "Githurai 45",
+            "Kahawa West",
+            "Zimmerman",
+            "Roysambu",
+            "Mwiki",
+            "Kasarani",
+            "Utalii",
+            "Lucky Summer",
+            "Ruaraka",
+            "Imara Daima",
+            "Embakasi",
+            "Utawala",
+            "Umoja",
+            "Makadara",
+            "Pumwani",
+            "Eastleigh",
+            "Ngara",
+            "Pangani",
+            "Mathare"
+        ]
+    },
+    {
+        "code": 1,
+        "county": "Mombasa (County)",
+        "towns": [
+            "Changamwe",
+            "Jomvu",
+            "Kisauni",
+            "Nyali",
+            "Likoni",
+            "Mvita"
+        ]
+    },
+    {
+        "code": 22,
+        "county": "Kiambu",
+        "towns": [
+            "Kiambu Town",
+            "Thika",
+            "Gatundu",
+            "Githunguri",
+            "Juja",
+            "Kabete",
+            "Kiambaa",
+            "Kikuyu",
+            "Lari",
+            "Limuru",
+            "Ruiru",
+            "Mwiki",
+            "Kahawa Sukari",
+            "Kahawa Wendani",
+            "Kinoo"
+        ]
+    },
+    {
+        "code": 2,
+        "county": "Kwale",
+        "towns": [
+            "Msambweni",
+            "Ukunda",
+            "Kwale"
+        ]
+    },
+    {
+        "code": 3,
+        "county": "Kilifi",
+        "towns": [
+            "Malindi",
+            "Vipingo",
+            "Watamu"
+        ]
+    },
+    {
+        "code": 4,
+        "county": "Tana River",
+        "towns": [
+            "Bura",
+            "Galole",
+            "Garsen"
+        ]
+    },
+    {
+        "code": 5,
+        "county": "Lamu",
+        "towns": [
+            "Lamu"
+        ]
+    },
+    {
+        "code": 6,
+        "county": "Taita-Taveta",
+        "towns": [
+            "Mwatate",
+            "Wundanyi",
+            "Voi",
+            "Taveta"
+        ]
+    },
+    {
+        "code": 7,
+        "county": "Garissa",
+        "towns": [
+            "Garissa Town"
+        ]
+    },
+    {
+        "code": 8,
+        "county": "Wajir",
+        "towns": [
+            "Wajir Town"
+        ]
+    },
+    {
+        "code": 9,
+        "county": "Mandera",
+        "towns": [
+            "Mandera Town"
+        ]
+    },
+    {
+        "code": 10,
+        "county": "Marsabit",
+        "towns": [
+            "Moyale",
+            "Marsabit"
+        ]
+    },
+    {
+        "code": 11,
+        "county": "Isiolo",
+        "towns": [
+            "Isiolo Town"
+        ]
+    },
+    {
+        "code": 12,
+        "county": "Meru",
+        "towns": [
+            "Meru Town",
+            "Imenti",
+            "Tigania",
+            "Igembe"
+        ]
+    },
+    {
+        "code": 13,
+        "county": "Tharaka-Nithi",
+        "towns": [
+            "Chuka",
+            "Muthambi",
+            "Mwimbi",
+            "Tharaka"
+        ]
+    },
+    {
+        "code": 14,
+        "county": "Embu",
+        "towns": [
+            "Runyenjes",
+            "Manyatta",
+            "Mbeere"
+        ]
+    },
+    {
+        "code": 15,
+        "county": "Kitui",
+        "towns": [
+            "Kitui Town"
+        ]
+    },
+    {
+        "code": 16,
+        "county": "Machakos",
+        "towns": [
+            "Machakos Town"
+        ]
+    },
+    {
+        "code": 17,
+        "county": "Makueni",
+        "towns": [
+            "Mbooni",
+            "Kibwezi",
+            "Makueni Town",
+            "Wote",
+            "Mtito Andei"
+        ]
+    },
+    {
+        "code": 18,
+        "county": "Nyandarua",
+        "towns": [
+            "Ol Kalou",
+            "Nyandarua Town",
+            "Kipipiri",
+            "Kinangop"
+        ]
+    },
+    {
+        "code": 19,
+        "county": "Nyeri",
+        "towns": [
+            "Nyeri Town",
+            "Karatina",
+            "Othaya"
+        ]
+    },
+    {
+        "code": 20,
+        "county": "Kirinyaga",
+        "towns": [
+            "Kerugoya Town",
+            "Sagana",
+            "Mwea"
+        ]
+    },
+    {
+        "code": 21,
+        "county": "Murang'a",
+        "towns": [
+            "Murangá Town"
+        ]
+    },
+    {
+        "code": 23,
+        "county": "Turkana",
+        "towns": [
+            "Lodwar",
+            "Lokichar",
+            "Kakuma"
+        ]
+    },
+    {
+        "code": 24,
+        "county": "West Pokot",
+        "towns": [
+            "kapenguria",
+            "Pokot"
+        ]
+    },
+    {
+        "code": 25,
+        "county": "Samburu",
+        "towns": [
+            "Maralal",
+            "Baragoi",
+            "Archers Post",
+            "Horr",
+            "Kisima"
+        ]
+    },
+    {
+        "code": 26,
+        "county": "Trans-Nzoia",
+        "towns": [
+            "Kitale",
+            "Kiminini",
+            "Maili Saba",
+            "Endebess",
+            "Kachobora"
+        ]
+    },
+    {
+        "code": 27,
+        "county": "Uasin Gishu",
+        "towns": [
+            "Eldoret",
+            "Moi's Bridge Town",
+            "Matunda",
+            "Burnt Forest",
+            "Jua Kali",
+            "Turbo"
+        ]
+    },
+    {
+        "code": 28,
+        "county": "Elgeyo-Marakwet",
+        "towns": [
+            "Item",
+            "Chesoi",
+            "Kimwarer"
+        ]
+    },
+    {
+        "code": 29,
+        "county": "Nandi",
+        "towns": [
+            "Kapsabet",
+            "Mosoriot",
+            "Tinderet",
+            "Kobujoi",
+            "Kaiboi",
+            "Kabiyet",
+            "Nandi Hills"
+        ]
+    },
+    {
+        "code": 30,
+        "county": "Baringo",
+        "towns": [
+            "Kabarnet",
+            "Eldama Ravine",
+            "Marigat",
+            "Mogotio",
+            "Kabartonjo",
+            "Chemolingot"
+        ]
+    },
+    {
+        "code": 31,
+        "county": "Laikipia",
+        "towns": [
+            "Nanyuki",
+            "Nyahururu",
+            "Rumuruti"
+        ]
+    },
+    {
+        "code": 32,
+        "county": "Nakuru",
+        "towns": [
+            "Nakuru",
+            "Naivasha",
+            "Molo",
+            "Gilgil",
+            "Njoro",
+            "Mai Mahiu",
+            "Subukia",
+            "Dundori",
+            "Salgaa",
+            "Elburgon"
+        ]
+    },
+    {
+        "code": 33,
+        "county": "Narok",
+        "towns": [
+            "Narok"
+        ]
+    },
+    {
+        "code": 34,
+        "county": "Kajiado",
+        "towns": [
+            "Kajiado Town",
+            "Ongata Rongai",
+            "Isinya",
+            "Ngong",
+            "Kitengela",
+            "Kiserian"
+        ]
+    },
+    {
+        "code": 35,
+        "county": "Kericho",
+        "towns": [
+            "Kericho Town",
+            "Londiani"
+        ]
+    },
+    {
+        "code": 36,
+        "county": "Bomet",
+        "towns": [
+            "Bomet Town"
+        ]
+    },
+    {
+        "code": 37,
+        "county": "Kakamega",
+        "towns": [
+            "Kakamega Town",
+            "Butere",
+            "Mumias",
+            "Navakholo",
+            "Malava",
+            "Khwisero",
+            "Shinyalu",
+            "Kilingili",
+            "Kimingíni",
+            "Eregi"
+        ]
+    },
+    {
+        "code": 38,
+        "county": "Vihiga",
+        "towns": [
+            "Mbale",
+            "Luanda",
+            "Sabatia",
+            "Chavakali",
+            "Majengo",
+            "Kaimosi"
+        ]
+    },
+    {
+        "code": 39,
+        "county": "Bungoma",
+        "towns": [
+            "Bungoma Town",
+            "Webuye",
+            "Sirisia",
+            "Kimilili"
+        ]
+    },
+    {
+        "code": 40,
+        "county": "Busia",
+        "towns": [
+            "Busia Town",
+            "Bunyala",
+            "Butula",
+            "Nambale",
+            "Funyula",
+            "Nangina",
+            "Budalangi"
+        ]
+    },
+    {
+        "code": 41,
+        "county": "Siaya",
+        "towns": [
+            "Siaya town",
+            "Bondo",
+            "Ugunja",
+            "Ukwala",
+            "Yala"
+        ]
+    },
+    {
+        "code": 42,
+        "county": "Kisumu",
+        "towns": [
+            "Kisumu",
+            "Nyakach",
+            "Muhoroni",
+            "Maseno"
+        ]
+    },
+    {
+        "code": 43,
+        "county": "Homa Bay",
+        "towns": [
+            "Homa Bay Town",
+            "Suba",
+            "Rachuonyo",
+            "Rangwe",
+            "Ndhiwa"
+        ]
+    },
+    {
+        "code": 44,
+        "county": "Migori",
+        "towns": [
+            "Migori Town",
+            "Awendo",
+            "Rongo"
+        ]
+    },
+    {
+        "code": 45,
+        "county": "Kisii",
+        "towns": [
+            "Kisii Town"
+        ]
+    },
+    {
+        "code": 46,
+        "county": "Nyamira",
+        "towns": [
+            "Nyamira Town",
+            "Nyansiongo"
+        ]
+    }
+]
