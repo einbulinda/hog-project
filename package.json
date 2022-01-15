@@ -1,0 +1,42 @@
+{
+  "name": "hog_project",
+  "version": "1.0.0",
+  "description": "System for House of Glamour",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/einbulinda/hog-project.git"
+  },
+  "keywords": [
+    "Crockery",
+    "Linen.",
+    "Kitchen",
+    "Appliances",
+    "Arshia"
+  ],
+  "author": "Einstein Bulinda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/einbulinda/hog-project/issues"
+  },
+  "homepage": "https://github.com/einbulinda/hog-project#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^12.0.3",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.6",
+    "node-datetime": "^2.1.2",
+    "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
