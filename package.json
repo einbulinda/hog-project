@@ -45,14 +45,8 @@
     "nodemon": "^2.0.15"
   },
   "engines": {
-    "node": "16.x",
-    "npm": "7.x"
-  },
-  "resolutions": {
-    "mini-css-extract-plugin": "2.4.5"
-  },
-  "devDependencies": {
-    "mini-css-extract-plugin": "2.4.5"
+    "node": "v16.13.0",
+    "npm": "7.19.1"
   },
   "overrides": {
     "mini-css-extract-plugin": "2.4.5"
