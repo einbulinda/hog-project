@@ -47,11 +47,11 @@ if (process.env.NODE_ENV === "production") {
   const __dirname = path.dirname(__filename);
 
   // serve any static files
-  app.use(express.static(path.join(__dirname, "client/build")));
+  app.use(express.static(path.join(__dirname, "./client/build")));
 
   // handle react routing, return all requests to React app
   app.get("*", (req, res) => {
-    req.sendFile(path.join(__dirname, "client/build", "index.html"));
+    req.sendFile(path.join(__dirname, "./client/build", "index.html"));
   });
 }
 
