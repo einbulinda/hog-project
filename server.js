@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
-import cors from "cors";
+import cors from "cors"; // allows/disallows cross-site communication
 import dotenv from "dotenv";
 import userRoutes from "./backend/routes/userRoutes.js";
 import productRoutes from "./backend/routes/productRoutes.js";
@@ -12,8 +12,11 @@ import {
   errorHandler,
   notFound,
 } from "./backend/middlewares/errorMiddleware.js";
+import path from "path";
+import helmet from "helmet"; // creates headers that protect from attacks (security)
 
 const app = express();
+app.use(helmet());
 
 // use environment variables
 dotenv.config();
