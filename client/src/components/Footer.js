@@ -118,7 +118,7 @@ const Footer = () => {
                   <Typography>Kenya</Typography>
                 </Box>
                 <Box py={0.6} color="grey.500">
-                  Email: info@houseofglamour.com
+                  Email: hseofgla@gmail.com
                 </Box>
                 <Box py={0.6} mb={2} color="grey.500">
                   Phone: +254 722 522 119
