@@ -36,7 +36,7 @@ app.use("/api/mpesa", mpesaRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-const databaseUrl = process.env.DB_URL;
+const db = process.env.MONGODB_URI;
 const port = process.env.PORT || 5000;
 
 if (process.env.NODE_ENV === "production") {
@@ -48,7 +48,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect the DB
 mongoose
-  .connect(databaseUrl, {
+  .connect(db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
