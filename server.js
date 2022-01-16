@@ -14,6 +14,7 @@ import {
 } from "./backend/middlewares/errorMiddleware.js";
 import path from "path";
 import helmet from "helmet"; // creates headers that protect from attacks (security)
+import { fileURLToPath } from "url";
 
 const app = express();
 app.use(helmet());
@@ -61,6 +62,9 @@ const db = process.env.MONGODB_URI;
 const port = process.env.PORT || 5000;
 
 if (process.env.NODE_ENV === "production") {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+
   // serve any static files
   app.use(express.static(path.join(__dirname, "client/build")));
 

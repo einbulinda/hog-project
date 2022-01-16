@@ -44,7 +44,8 @@
     "mongoose": "^6.1.6",
     "node-datetime": "^2.1.2",
     "nodemon": "^2.0.15",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "url": "^0.11.0"
   },
   "engines": {
     "node": "v16.13.0",
