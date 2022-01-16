@@ -63,5 +63,8 @@
   },
   "resolutions": {
     "mini-css-extract-plugin": "2.4.5"
+  },
+  "overrides": {
+    "mini-css-extract-plugin": "2.4.5"
   }
 }
