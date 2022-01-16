@@ -1,6 +1,7 @@
 {
   "name": "hog_project",
   "version": "1.0.0",
+  "type": "module",
   "description": "System for House of Glamour",
   "main": "server.js",
   "scripts": {

@@ -20,7 +20,7 @@ import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import { createProduct } from "redux/actions/productActions";
 import { Box } from "@mui/system";
 import { productSchema } from "validations";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import DropZone from "components/styled-components/DropZone";
 
 const mapState = ({ productsData, categoriesData }) => ({
@@ -39,7 +39,7 @@ const AdminAddProducts = () => {
     loading && setSaving(loading);
   }, [loading]);
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   // handling file upload
   const handleOnDrop = (file) => {
@@ -81,7 +81,7 @@ const AdminAddProducts = () => {
     newProduct.image = imageUrl;
     dispatch(createProduct(newProduct));
     resetForm({});
-    !saving && history.push(ADMIN_PRODUCTS);
+    !saving && navigate(ADMIN_PRODUCTS);
   };
 
   return (

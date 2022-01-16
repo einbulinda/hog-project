@@ -18,7 +18,6 @@ import Box from "@mui/system/Box";
 import NumberFormat from "react-number-format";
 import { H5, H6, Paragraph } from "components/Typography";
 import TableRow from "components/styled-components/TableRow";
-import { getAddressById } from "redux/actions/userActions";
 
 const mapState = ({ ordersData }) => ({
   orderDetails: ordersData.orderDetails,

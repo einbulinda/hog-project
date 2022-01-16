@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { LOGIN } from "navigation/CONSTANTS";
 
 const mapState = ({ user }) => ({
@@ -9,13 +9,13 @@ const mapState = ({ user }) => ({
 
 const useAuth = (props) => {
   const { currentUser } = useSelector(mapState);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!currentUser) {
-      history.push(LOGIN);
+      navigate(LOGIN);
     }
-  }, [history, currentUser]);
+  }, [navigate, currentUser]);
 
   return currentUser;
 };

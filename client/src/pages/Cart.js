@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   selectCartDiscount,
   selectCartItems,
@@ -13,7 +13,6 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
-import TextField from "@mui/material/TextField";
 import FlexBox from "components/styled-components/FlexBox";
 import { CustomLink } from "components/styled-components/CustomLink";
 import { CHECKOUT, HOME } from "navigation/CONSTANTS";
@@ -29,7 +28,7 @@ const mapState = createStructuredSelector({
 const Cart = () => {
   const { cartItems, cartSubTotal, cartDiscount } = useSelector(mapState);
   const cartTotal = cartSubTotal - cartDiscount;
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <Container sx={{ mt: "3rem" }}>
@@ -41,7 +40,7 @@ const Cart = () => {
             ))}
             <FlexBox justifyContent="center">
               <Button
-                onClick={() => history.goBack()}
+                onClick={() => navigate(-1)}
                 variant="contained"
                 color="error"
               >

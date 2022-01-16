@@ -1,5 +1,5 @@
 import { Suspense, lazy as Lazy } from "react";
-import { Route, Switch } from "react-router";
+import { Route, Routes } from "react-router";
 import Loading from "./Loading";
 import * as url from "./CONSTANTS";
 
@@ -47,230 +47,215 @@ const PaymentPage = Lazy(() => import("pages/user-pages/PaymentPage"));
 const RouterConfig = () => {
   return (
     <Suspense fallback={<Loading />}>
-      <Switch>
+      <Routes>
         {/* Public Routes */}
         <Route
-          exact
           path={url.HOME}
-          render={(props) => (
+          element={
             <AppLayout>
-              <Homepage {...props} />
+              <Homepage />
             </AppLayout>
-          )}
+          }
         />
         <Route
-          exact
           path={url.LOGIN}
-          render={(props) => (
+          element={
             <AppLayout>
-              <UserAuthPage {...props} />
+              <UserAuthPage />
             </AppLayout>
-          )}
+          }
         />
         <Route
-          exact
           path={url.REGISTER}
-          render={(props) => (
+          element={
             <AppLayout>
-              <UserAuthPage {...props} />
+              <UserAuthPage />
             </AppLayout>
-          )}
+          }
         />
         <Route
-          exact
           path={url.PRODUCT_DETAILS}
-          render={(props) => (
+          element={
             <AppLayout>
-              <ProductDetailsPage {...props} />
+              <ProductDetailsPage />
             </AppLayout>
-          )}
+          }
         />
         <Route
           path={url.CART}
-          render={(props) => (
+          element={
             <AppLayout>
-              <Cart {...props} />
+              <Cart />
             </AppLayout>
-          )}
+          }
         />
 
         {/* Private Routes */}
         <Route
-          exact
           path={url.PROFILE}
-          render={(props) => (
+          element={
             <PrivateRoutes>
               <AppLayout>
                 <CustomerLayout>
-                  <MyProfile {...props} />
+                  <MyProfile />
                 </CustomerLayout>
               </AppLayout>
             </PrivateRoutes>
-          )}
+          }
         />
         <Route
-          exact
           path={url.EDIT_PROFILE}
-          render={(props) => (
+          element={
             <PrivateRoutes>
               <AppLayout>
                 <CustomerLayout>
-                  <EditMyProfile {...props} />
+                  <EditMyProfile />
                 </CustomerLayout>
               </AppLayout>
             </PrivateRoutes>
-          )}
+          }
         />
         <Route
           path={url.CHECKOUT}
-          render={(props) => (
+          element={
             <PrivateRoutes>
               <AppLayout>
-                <CheckoutPage {...props} />
+                <CheckoutPage />
               </AppLayout>
             </PrivateRoutes>
-          )}
+          }
         />
         <Route
           path={url.PAYMENT}
-          render={(props) => (
+          element={
             <PrivateRoutes>
               <AppLayout>
-                <PaymentPage {...props} />
+                <PaymentPage />
               </AppLayout>
             </PrivateRoutes>
-          )}
+          }
         />
         <Route
-          exact
           path={url.ORDERS}
-          render={(props) => (
+          element={
             <PrivateRoutes>
               <AppLayout>
                 <CustomerLayout>
-                  <MyOrders {...props} />
+                  <MyOrders />
                 </CustomerLayout>
               </AppLayout>
             </PrivateRoutes>
-          )}
+          }
         />
         <Route
-          exact
           path={url.ORDER_DETAILS}
-          render={(props) => (
+          element={
             <PrivateRoutes>
               <AppLayout>
                 <CustomerLayout>
-                  <OrderDetailsPage {...props} />
+                  <OrderDetailsPage />
                 </CustomerLayout>
               </AppLayout>
             </PrivateRoutes>
-          )}
+          }
         />
 
         {/* Admin Routes */}
         <Route
-          exact
           path={url.ADMIN}
-          render={(props) => (
+          element={
             <AdminRoutes>
               <AppLayout>
                 <AdminLayout>
-                  <AdminDashboard {...props} />
+                  <AdminDashboard />
                 </AdminLayout>
               </AppLayout>
             </AdminRoutes>
-          )}
+          }
         />
         <Route
-          exact
           path={url.ADMIN_PRODUCTS}
-          render={(props) => (
+          element={
             <AdminRoutes>
               <AppLayout>
                 <AdminLayout>
-                  <AdminProductsList {...props} />
+                  <AdminProductsList />
                 </AdminLayout>
               </AppLayout>
             </AdminRoutes>
-          )}
+          }
         />
         <Route
-          exact
           path={url.ADD_PRODUCT}
-          render={(props) => (
+          element={
             <AdminRoutes>
               <AppLayout>
                 <AdminLayout>
-                  <AdminAddProducts {...props} />
+                  <AdminAddProducts />
                 </AdminLayout>
               </AppLayout>
             </AdminRoutes>
-          )}
+          }
         />
         <Route
-          exact
           path={url.EDIT_PRODUCT}
-          render={(props) => (
+          element={
             <AdminRoutes>
               <AppLayout>
                 <AdminLayout>
-                  <AdminEditProducts {...props} />
+                  <AdminEditProducts />
                 </AdminLayout>
               </AppLayout>
             </AdminRoutes>
-          )}
+          }
         />
         <Route
-          exact
           path={url.CATEGORIES}
-          render={(props) => (
+          element={
             <AdminRoutes>
               <AppLayout>
                 <AdminLayout>
-                  <AdminCategoriesList {...props} />
+                  <AdminCategoriesList />
                 </AdminLayout>
               </AppLayout>
             </AdminRoutes>
-          )}
+          }
         />
         <Route
-          exact
           path={url.ADD_CATEGORY}
-          render={(props) => (
+          element={
             <AdminRoutes>
               <AppLayout>
                 <AdminLayout>
-                  <AdminAddCategory {...props} />
+                  <AdminAddCategory />
                 </AdminLayout>
               </AppLayout>
             </AdminRoutes>
-          )}
+          }
         />
         <Route
-          exact
           path={url.EDIT_CATEGORY}
-          render={(props) => (
+          element={
             <AdminRoutes>
               <AppLayout>
                 <AdminLayout>
-                  <AdminEditCategory {...props} />
+                  <AdminEditCategory />
                 </AdminLayout>
               </AppLayout>
             </AdminRoutes>
-          )}
+          }
         />
 
         {/* Catch all route. Always at bottom */}
         <Route
           path="*"
-          render={(props) => (
+          element={
             <AppLayout>
-              <NotFoundPage {...props} />
+              <NotFoundPage />
             </AppLayout>
-          )}
+          }
         />
-      </Switch>
+      </Routes>
     </Suspense>
   );
 };

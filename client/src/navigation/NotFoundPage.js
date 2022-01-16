@@ -5,11 +5,11 @@ import { Button, Typography } from "@mui/material";
 import { HOME } from "./CONSTANTS";
 
 import { CustomLink } from "components/styled-components/CustomLink";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import ButtonText from "components/styled-components/ButtonText";
 
 const NotFoundPage = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <Grid container>
@@ -32,7 +32,7 @@ const NotFoundPage = () => {
               <CustomLink path={HOME}>Go Shopping</CustomLink>
             </ButtonText>
             {/* Consider auto redirecting back */}
-            <Button variant="contained" onClick={() => history.goBack()}>
+            <Button variant="contained" onClick={() => navigate(-1)}>
               GO BACK
             </Button>
           </PaperItem>

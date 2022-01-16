@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import React from "react";
 import Logo from "assets/logos/mainLogo.png";
 import { makeStyles } from "@mui/styles";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { HOME } from "navigation/CONSTANTS";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme) => ({
 
 const MainLogo = () => {
   const classes = useStyles();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleMenuClick = (pageURL) => {
-    history.push(pageURL);
+    navigate(pageURL);
   };
 
   return (

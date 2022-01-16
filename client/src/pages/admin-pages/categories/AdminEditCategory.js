@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { getCategory, updateCategory } from "redux/actions/categoriesActions";
 import { categorySchema } from "validations";
@@ -28,7 +28,7 @@ const AdminEditCategory = () => {
   const { category } = useSelector(mapState);
   const { name, status } = category;
   const [cateStatus, setCateStatus] = useState(false);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const initialValues = { name, status };
 
@@ -44,7 +44,7 @@ const AdminEditCategory = () => {
     data.status = cateStatus;
     data.id = id;
     dispatch(updateCategory(data));
-    history.push(CATEGORIES);
+    navigate(CATEGORIES);
   };
 
   return (
@@ -119,7 +119,7 @@ const AdminEditCategory = () => {
                 <Button
                   variant="contained"
                   color="secondary"
-                  onClick={() => history.push(CATEGORIES)}
+                  onClick={() => navigate(CATEGORIES)}
                   sx={{ mt: "2rem", mr: "30%", ml: "1rem" }}
                 >
                   Cancel

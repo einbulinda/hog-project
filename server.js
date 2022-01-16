@@ -4,12 +4,15 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 
-import userRoutes from "./routes/userRoutes.js";
-import productRoutes from "./routes/productRoutes.js";
-import categoryRoutes from "./routes/categoryRoutes.js";
-import orderRoutes from "./routes/orderRoutes.js";
-import mpesaRoutes from "./routes/mpesaRoutes.js";
-import { errorHandler, notFound } from "./middlewares/errorMiddleware.js";
+import userRoutes from "./backend/routes/userRoutes.js";
+import productRoutes from "./backend/routes/productRoutes.js";
+import categoryRoutes from "./backend/routes/categoryRoutes.js";
+import orderRoutes from "./backend/routes/orderRoutes.js";
+import mpesaRoutes from "./backend/routes/mpesaRoutes.js";
+import {
+  errorHandler,
+  notFound,
+} from "./backend/middlewares/errorMiddleware.js";
 
 const app = express();
 

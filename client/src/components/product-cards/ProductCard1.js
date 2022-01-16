@@ -27,7 +27,7 @@ import { H3 } from "components/Typography";
 import { CustomLink } from "components/styled-components/CustomLink";
 import { useDispatch } from "react-redux";
 import { addToCart } from "redux/actions/cartActions";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { CART } from "navigation/CONSTANTS";
 import PriceTag from "components/styled-components/PriceTag";
 import ProductIntro from "./ProductIntro";
@@ -113,7 +113,7 @@ const ProductCard1 = ({ product }) => {
   const [toast, setToast] = useState(false);
   const classes = useStyles();
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const {
     _id,
@@ -145,7 +145,7 @@ const ProductCard1 = ({ product }) => {
   // Toast Action
   const action = (
     <Fragment>
-      <Button color="secondary" size="small" onClick={() => history.push(CART)}>
+      <Button color="secondary" size="small" onClick={() => navigate(CART)}>
         CART
       </Button>
       <IconButton

@@ -17,7 +17,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { ADMIN_PRODUCTS } from "navigation/CONSTANTS";
 import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { getAllCategories } from "redux/actions/categoriesActions";
 import { getProduct, updateProduct } from "redux/actions/productActions";
 import { storage } from "services/utils";
@@ -31,7 +31,7 @@ const mapState = ({ productsData, categoriesData }) => ({
 
 const AdminEditProducts = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { product, loading, categories } = useSelector(mapState);
   const [uploading, setUploading] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
@@ -118,7 +118,7 @@ const AdminEditProducts = () => {
 
     dispatch(updateProduct(updatedProduct));
     resetForm({});
-    history.push(ADMIN_PRODUCTS);
+    navigate(ADMIN_PRODUCTS);
   };
 
   return (

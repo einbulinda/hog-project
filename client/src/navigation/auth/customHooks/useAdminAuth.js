@@ -1,21 +1,21 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { HOME, LOGIN } from "navigation/CONSTANTS";
 
 const mapState = ({ user }) => ({ currentUser: user.currentUser });
 
 const useAdminAuth = (props) => {
   const { currentUser } = useSelector(mapState);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!currentUser) {
-      history.push(LOGIN);
+      navigate(LOGIN);
     } else if (!currentUser.isAdmin) {
-      history.push(HOME);
+      navigate(HOME);
     }
-  }, [history, currentUser]);
+  }, [currentUser, navigate]);
 
   return currentUser;
 };

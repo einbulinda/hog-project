@@ -17,7 +17,7 @@ import MobileDatePicker from "@mui/lab/MobileDatePicker";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { profileUpdate } from "redux/actions/userActions";
 import { H5, Paragraph } from "components/Typography";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import CustomerDashboardNav from "components/styled-components/CustomerDashboardNav";
 
 const mapState = ({ user }) => ({
@@ -26,7 +26,7 @@ const mapState = ({ user }) => ({
 
 const EditMyProfile = () => {
   const { currentUser } = useSelector(mapState);
-  const history = useHistory();
+  const navigate = useNavigate();
   const names = currentUser.name.split(" ", 2);
   const dispatch = useDispatch();
   const [imgUrl, setImgUrl] = useState("");
@@ -81,7 +81,7 @@ const EditMyProfile = () => {
       photo: imgUrl,
     };
     dispatch(profileUpdate(updatedProfile));
-    history.push(url.PROFILE);
+    navigate(url.PROFILE);
   };
 
   // Form Initial Values

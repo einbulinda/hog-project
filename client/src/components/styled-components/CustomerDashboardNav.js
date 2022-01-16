@@ -13,7 +13,7 @@ import { logoutUser } from "redux/actions/userActions";
 import { H5 } from "components/Typography";
 import UserAvatar from "components/styled-components/StyledBadge";
 import { getUserOrderHistory } from "redux/actions/orderActions";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { HOME } from "navigation/CONSTANTS";
 
 const mapState = ({ user, ordersData }) => ({
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 const CustomerDashboardNav = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { currentUser, orderHistory } = useSelector(mapState);
   const numberOfOrders = Array.isArray(orderHistory) && orderHistory.length;
 
@@ -59,7 +59,7 @@ const CustomerDashboardNav = () => {
 
   const signOutUser = () => {
     dispatch(logoutUser());
-    history.push(HOME);
+    navigate(HOME);
   };
 
   return (

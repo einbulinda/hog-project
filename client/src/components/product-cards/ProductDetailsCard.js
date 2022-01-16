@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { addToCart } from "redux/actions/cartActions";
 import NumberFormat from "react-number-format";
 import { getProduct } from "redux/actions/productActions";
@@ -20,7 +20,7 @@ const mapState = ({ productsData }) => ({
 const ProductDetailsCard = () => {
   const dispatch = useDispatch();
   const { product } = useSelector(mapState);
-  const history = useHistory();
+  const navigate = useNavigate();
   const { id } = useParams();
   const { image, name, brand, price, qty } = product;
 
@@ -31,7 +31,7 @@ const ProductDetailsCard = () => {
   const handleAddToCart = (product) => {
     if (!product) return;
     dispatch(addToCart(product));
-    history.push(CART);
+    navigate(CART);
   };
 
   return (

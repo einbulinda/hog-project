@@ -54,7 +54,6 @@ const SearchBox = () => {
   // On Loading Component
   useEffect(() => {
     dispatch(getAllCategories());
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -78,7 +77,7 @@ const SearchBox = () => {
       }
     >
       {categories.map((item) => (
-        <MenuItem key={item}>{item}</MenuItem>
+        <MenuItem key={item._id}>{item.name}</MenuItem>
       ))}
     </HogMenu>
   );

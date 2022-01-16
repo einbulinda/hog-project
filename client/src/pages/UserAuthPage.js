@@ -23,7 +23,7 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Box } from "@mui/system";
 import FlexBox from "components/styled-components/FlexBox";
 import { CustomLink } from "components/styled-components/CustomLink";
-import { useHistory } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 
 const mapState = (state) => ({
   currentUser: state.user.currentUser,
@@ -39,8 +39,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const UserAuthPage = () => {
-  const history = useHistory();
-  const currentURL = history.location.pathname;
+  const navigate = useNavigate();
+  const currentURL = useLocation();
   const [passwordVisibility, setPasswordVisibility] = useState(false);
   const [passwordVisibility2, setPasswordVisibility2] = useState(false);
   const dispatch = useDispatch();
@@ -73,8 +73,8 @@ const UserAuthPage = () => {
   };
 
   useEffect(() => {
-    if (currentUser) history.push(url.HOME);
-  }, [currentUser, history]);
+    if (currentUser) navigate(url.HOME);
+  }, [currentUser, navigate]);
 
   useEffect(() => {
     if (currentURL === "/login") setLogin(true);

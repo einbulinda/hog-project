@@ -3,7 +3,7 @@ import CheckoutForm from "components/checkout-components/CheckoutForm";
 import CheckoutSummary from "components/checkout-components/CheckoutSummary";
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import SummarizeIcon from "@mui/icons-material/Summarize";
 import { CART, ORDERS, PAYMENT } from "navigation/CONSTANTS";
 import {
@@ -42,7 +42,7 @@ const mapState = createStructuredSelector({
 });
 
 const CheckoutPage = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [deliveryMode, setDeliveryMode] = useState("");
   const [payMode, setPayMode] = useState("");
@@ -80,12 +80,12 @@ const CheckoutPage = () => {
 
   const placeOrder = () => {
     dispatch(patchOrder(createOrder()));
-    history.push(ORDERS);
+    navigate(ORDERS);
   };
 
   const handleMpesaOption = () => {
     patchOrder();
-    history.push({ pathname: PAYMENT, state: { order: patchOrder() } });
+    navigate({ pathname: PAYMENT, state: { order: patchOrder() } });
   };
 
   return (
@@ -190,7 +190,7 @@ const CheckoutPage = () => {
         <Grid container justifyContent="center" spacing={6}>
           <Grid item sm={4} xs={12}>
             <Button
-              onClick={() => history.push(CART)}
+              onClick={() => navigate(CART)}
               variant="outlined"
               color="error"
               type="button"
