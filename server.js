@@ -40,9 +40,9 @@ const db = process.env.MONGODB_URI;
 const port = process.env.PORT || 5000;
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("build"));
+  app.use(express.static("client/build"));
   app.get("*", (req, res) => {
-    req.sendFile(path.resolve(__dirname, "frontend/build", "index.html"));
+    req.sendFile(path.join(__dirname, "client/build", "index.html"));
   });
 }
 
