@@ -1,14 +1,14 @@
-import asyncHandler from "express-async-handler";
-import User from "../models/userModels.js";
-import mongoose from "mongoose";
-import generateToken from "../utils/generateToken.js";
-import AddressModel from "../models/addressModel.js";
-import expressAsyncHandler from "express-async-handler";
+const asyncHandler = require("express-async-handler"),
+  User = require("../models/userModels.js"),
+  mongoose = require("mongoose"),
+  generateToken = require("../utils/generateToken.js"),
+  AddressModel = require("../models/addressModel.js"),
+  expressAsyncHandler = require("express-async-handler");
 
 // @description     Register New User
 // @route           POST /api/users/register
 // @access          Public
-export const registerUser = asyncHandler(async (req, res) => {
+exports.registerUser = asyncHandler(async (req, res) => {
   const { firstName, lastName, email, password, photo } = req.body;
 
   const userExists = await User.findOne({ email });
@@ -44,7 +44,7 @@ export const registerUser = asyncHandler(async (req, res) => {
 // @description     Authenticate User
 // @route           POST /api/users/login
 // @access          Public
-export const authUser = asyncHandler(async (req, res) => {
+exports.authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
   const user = await User.findOne({ email });
@@ -69,7 +69,7 @@ export const authUser = asyncHandler(async (req, res) => {
 // @Description     Update User Profile
 // @route           POST /api/users/update
 // @access          Private
-export const updateUser = asyncHandler(async (req, res) => {
+exports.updateUser = asyncHandler(async (req, res) => {
   const { _id, name, contact, dob, email, photo } = req.body;
   if (!mongoose.Types.ObjectId.isValid(_id))
     return res.status(404).send(`No user with ID ${_id} found.`);
@@ -80,7 +80,7 @@ export const updateUser = asyncHandler(async (req, res) => {
 });
 
 // Create Delivery Address
-export const createAddress = asyncHandler(async (req, res) => {
+exports.createAddress = asyncHandler(async (req, res) => {
   const {
     firstName,
     lastName,
@@ -120,7 +120,7 @@ export const createAddress = asyncHandler(async (req, res) => {
 // @Description     Get User Address
 // @route           GET /api/users/address
 // @access          Private
-export const getAddress = asyncHandler(async (req, res) => {
+exports.getAddress = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -133,7 +133,7 @@ export const getAddress = asyncHandler(async (req, res) => {
 });
 
 // @Description   Get Address By Id
-export const getAddressById = expressAsyncHandler(async (req, res) => {
+exports.getAddressById = expressAsyncHandler(async (req, res) => {
   const { id } = req.params;
 
   try {

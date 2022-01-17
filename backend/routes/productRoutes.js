@@ -1,16 +1,15 @@
-import express from "express";
-import {
-  getProduct,
-  getProducts,
-  createProduct,
-  updateProduct,
-} from "../controllers/productControllers.js";
-
-const router = express.Router();
+const express = require("express"),
+  {
+    getProduct,
+    getProducts,
+    createProduct,
+    updateProduct,
+  } = require("../controllers/productControllers.js"),
+  router = express.Router();
 
 router.get("/", getProducts);
 router.get("/:id", getProduct);
 router.post("/create", createProduct);
 router.patch("/update", updateProduct);
 
-export default router;
+module.exports = router;

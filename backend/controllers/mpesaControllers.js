@@ -1,8 +1,7 @@
-import dotenv from "dotenv";
-import axios from "axios";
-import datetime from "node-datetime";
+const axios = require("axios"),
+  datetime = require("node-datetime");
 
-dotenv.config();
+require("dotenv").config();
 
 const passKey = process.env.PASSKEY;
 const shortCode = process.env.SHORT_CODE;
@@ -18,7 +17,7 @@ const password = () => {
 };
 
 // Access Token
-export const access = (req, res, next) => {
+exports.access = (req, res, next) => {
   const url =
     "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
 
@@ -40,12 +39,12 @@ export const access = (req, res, next) => {
 };
 
 // Test Token is being passed
-export const accessToken = (req, res) => {
+exports.accessToken = (req, res) => {
   res.status(200).json({ access_token: req.token });
 };
 
 // Register URLs
-export const register = (req, res) => {
+exports.register = (req, res) => {
   let url = "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl";
 
   const auth = {
@@ -70,19 +69,19 @@ export const register = (req, res) => {
 };
 
 // Confirmation CB API
-export const confirmation = (req, res) => {
+exports.confirmation = (req, res) => {
   console.log("...............Confirmation................");
   console.log(req.body);
 };
 
 // Validation CB API
-export const validation = (req, res) => {
+exports.validation = (req, res) => {
   console.log("...............Validation................");
   console.log(req.body);
 };
 
 // Simulate
-export const simulate = (req, res) => {
+exports.simulate = (req, res) => {
   let url = "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate";
   let auth = {
     headers: {

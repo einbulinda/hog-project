@@ -1,11 +1,11 @@
-import asyncHandler from "express-async-handler";
-import Category from "../models/categoryModels.js";
-import mongoose from "mongoose";
+const asyncHandler = require("express-async-handler"),
+  Category = require("../models/categoryModels"),
+  mongoose = require("mongoose");
 
 // Create Category
 // POST /api/category/create
 // Admin Access
-export const createCategory = asyncHandler(async (req, res) => {
+exports.createCategory = asyncHandler(async (req, res) => {
   const { name, status } = req.body;
 
   const categoryExists = await Category.findOne({ name });
@@ -36,7 +36,7 @@ export const createCategory = asyncHandler(async (req, res) => {
 // Get All Category
 // POST /api/category
 // Admin Access
-export const getCategories = asyncHandler(async (req, res) => {
+exports.getCategories = asyncHandler(async (req, res) => {
   try {
     const categories = await Category.find();
     res.status(200).json(categories);
@@ -48,7 +48,7 @@ export const getCategories = asyncHandler(async (req, res) => {
 // Get Specific Category
 // POST /api/category/:id
 // Admin Access
-export const getCategory = asyncHandler(async (req, res) => {
+exports.getCategory = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -62,7 +62,7 @@ export const getCategory = asyncHandler(async (req, res) => {
 // Update A Category
 // POST /api/category/update
 // Admin Access
-export const updateCategory = asyncHandler(async (req, res) => {
+exports.updateCategory = asyncHandler(async (req, res) => {
   const { name, status, id } = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(id))

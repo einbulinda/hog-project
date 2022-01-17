@@ -1,8 +1,8 @@
-import expressAsyncHandler from "express-async-handler";
-import OrderModel from "../models/ordersModel.js";
+const expressAsyncHandler = require("express-async-handler"),
+  OrderModel = require("../models/ordersModel.js");
 
 // Create an Order
-export const createOrder = expressAsyncHandler(async (req, res) => {
+exports.createOrder = expressAsyncHandler(async (req, res) => {
   const {
     user,
     paymentMode,
@@ -53,7 +53,7 @@ export const createOrder = expressAsyncHandler(async (req, res) => {
 });
 
 // Get a user's orders
-export const getUserOrders = expressAsyncHandler(async (req, res) => {
+exports.getUserOrders = expressAsyncHandler(async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -65,7 +65,7 @@ export const getUserOrders = expressAsyncHandler(async (req, res) => {
 });
 
 // Get Order details
-export const getOrderDetails = expressAsyncHandler(async (req, res) => {
+exports.getOrderDetails = expressAsyncHandler(async (req, res) => {
   const { id } = req.params;
 
   try {

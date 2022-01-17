@@ -1,9 +1,9 @@
-import asyncHandler from "express-async-handler";
-import mongoose from "mongoose";
-import ProductModel from "../models/productModels.js";
+const asyncHandler = require("express-async-handler"),
+  mongoose = require("mongoose"),
+  ProductModel = require("../models/productModels");
 
 // Create a Product
-export const createProduct = asyncHandler(async (req, res) => {
+exports.createProduct = asyncHandler(async (req, res) => {
   const {
     name,
     category,
@@ -56,7 +56,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 });
 
 // Get All Products
-export const getProducts = async (req, res) => {
+exports.getProducts = async (req, res) => {
   try {
     const products = await ProductModel.find().sort({ updatedAt: "desc" });
     res.status(200).json(products);
@@ -66,7 +66,7 @@ export const getProducts = async (req, res) => {
 };
 
 // Get a Specific Product
-export const getProduct = async (req, res) => {
+exports.getProduct = async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -78,7 +78,7 @@ export const getProduct = async (req, res) => {
 };
 
 // Update a Product
-export const updateProduct = asyncHandler(async (req, res) => {
+exports.updateProduct = asyncHandler(async (req, res) => {
   const {
     _id,
     name,
